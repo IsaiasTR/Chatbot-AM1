@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       ejercicios = data;
       mensajeBot(
-        "Hola 👋 Soy el asistente de Análisis Matemático I.<br>" +
-        "Buscá ejercicios por tema (ej: límite, continuidad, función)."
+        "Hola 👋 Soy el asistente virtual de Análisis Matemático 1 - CÁTEDRA: VAZQUEZ MAGNANI.<br>" +
+        "Buscá ejercicios por tema (ej: funciones lineales, limites, derivadas, etc)."
       );
     });
 });
