@@ -6,10 +6,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- MathJax para LaTeX -->
   <script>
     window.MathJax = {
       tex: {
@@ -26,15 +24,18 @@
 
 <body>
 
-  <header style="text-align: center;">
-    <h1>CHATBOT - ANÁLISIS MATEMÁTICO 1 - CÁTEDRA: VAZQUEZ MAGNANI</h1>
-    <p class="subtitulo-grande">ACÁ PODES CONSULTAR POR LOS EJERCICIOS DE LAS GUIAS</p>
+  <header>
+    <h1>CHATBOT - ANÁLISIS MATEMÁTICO 1</h1>
+    <h2>CÁTEDRA: VAZQUEZ MAGNANI</h2>
+    <p>ACÁ PODES CONSULTAR POR LOS EJERCICIOS DE LAS GUIAS</p>
   </header>
 
   <main class="chat-wrapper">
 
     <div id="chat-container" class="chat-container">
-      <!-- Mensajes -->
+      <div class="mensaje bot">
+        ¡Hola! Soy tu asistente virtual de Análisis Matemático 1. ¿En qué ejercicio o tema de la guía te puedo ayudar hoy?
+      </div>
     </div>
 
     <div class="chat-input">
@@ -44,13 +45,15 @@
         placeholder="Escribí un tema (ej: límite, función)"
         onkeydown="if(event.key==='Enter') buscar()"
       >
-     <button onclick="buscar()">Enviar</button>
-     </div>
+      <button onclick="buscar()">Enviar</button>
+    </div>
   </main>
 
-
   <footer>
-    <p>Cátedra AM1 · Uso académico</p>
+    <p>ANÁLISIS MATEMÁTICO 1 - CBC - FCE - UBA</p>
+    <p>Desarrollado por <strong>ISAIAS TENORIO</strong> | 
+       <a href="https://github.com/IsaiasTR" target="_blank">Mi GitHub</a>
+    </p>
   </footer>
 
   <script src="app.js"></script>
