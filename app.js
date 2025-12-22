@@ -2,117 +2,70 @@ let ejercicios = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch("ejercicios.json")
-    .then(response => response.json())
+    .then(r => r.json())
     .then(data => {
       ejercicios = data;
-      mostrarMensajeInicial();
-    })
-    .catch(error => {
-      console.error("Error cargando ejercicios:", error);
+      mensajeBot(
+        "Hola 👋 Soy el asistente de Análisis Matemático I.<br>" +
+        "Buscá ejercicios por tema (ej: límite, continuidad, función)."
+      );
     });
 });
 
-function mostrarMensajeInicial() {
-  const container = document.getElementById("chat-container");
-  container.innerHTML = `
-    <div class="mensaje-inicial">
-      Escribí un tema o palabra clave para buscar ejercicios.
-      <br>
-      <span>Ejemplos: límite, función, continuidad</span>
-    </div>
-  `;
+function mensajeUsuario(texto) {
+  const chat = document.getElementById("chat-container");
+  const div = document.createElement("div");
+  div.className = "mensaje usuario";
+  div.textContent = texto;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function mensajeBot(html) {
+  const chat = document.getElementById("chat-container");
+  const div = document.createElement("div");
+  div.className = "mensaje bot";
+  div.innerHTML = html;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+  if (window.MathJax) MathJax.typesetPromise();
 }
 
 function buscar() {
-  const texto = document
-    .getElementById("inputPregunta")
-    .value
-    .toLowerCase()
-    .trim();
-
+  const input = document.getElementById("inputPregunta");
+  const texto = input.value.trim().toLowerCase();
   if (!texto) return;
 
-  const resultados = [];
+  mensajeUsuario(input.value);
+  input.value = "";
+
+  let respuesta = "";
+  let encontrados = 0;
 
   ejercicios.forEach(bloque => {
-    const enunciadosFiltrados = bloque.enunciados.filter(ej =>
-      (ej.texto && ej.texto.toLowerCase().includes(texto)) ||
-      (ej.items && ej.items.join(" ").toLowerCase().includes(texto)) ||
-      (ej.funciones && ej.funciones.join(" ").toLowerCase().includes(texto))
-    );
-
-    if (enunciadosFiltrados.length > 0) {
-      resultados.push({
-        ...bloque,
-        enunciados: enunciadosFiltrados
-      });
-    }
-  });
-
-  renderizarEjercicios(resultados);
-}
-
-function renderizarEjercicios(data) {
-  const container = document.getElementById("chat-container");
-  container.innerHTML = "";
-
-  if (data.length === 0) {
-    container.innerHTML = `
-      <div class="mensaje-inicial">
-        No se encontraron ejercicios para esa búsqueda.
-      </div>
-    `;
-    return;
-  }
-
-  data.forEach(bloque => {
-    const titulo = document.createElement("h2");
-    titulo.className = "titulo-seccion";
-    titulo.textContent = `${bloque.titulo} (pág. ${bloque.pagina})`;
-    container.appendChild(titulo);
-
     bloque.enunciados.forEach(ej => {
-      const card = document.createElement("div");
-      card.className = "ejercicio-card";
+      const contenido =
+        (ej.texto || "") +
+        (ej.items ? ej.items.join(" ") : "") +
+        (ej.funciones ? ej.funciones.join(" ") : "");
 
-      if (ej.numero) {
-        const h3 = document.createElement("h3");
-        h3.textContent = `Ejercicio ${ej.numero}`;
-        card.appendChild(h3);
+      if (contenido.toLowerCase().includes(texto) && encontrados < 3) {
+        respuesta += `
+          <strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>
+          ${ej.texto || ""}
+          <br><br>
+        `;
+        encontrados++;
       }
-
-      if (ej.texto) {
-        const p = document.createElement("p");
-        p.textContent = ej.texto;
-        card.appendChild(p);
-      }
-
-      if (ej.funciones) {
-        ej.funciones.forEach(f => {
-          const div = document.createElement("div");
-          div.className = "latex-line";
-          div.innerHTML = f;
-          card.appendChild(div);
-        });
-      }
-
-      if (ej.items) {
-        const ul = document.createElement("ul");
-        ej.items.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          ul.appendChild(li);
-        });
-        card.appendChild(ul);
-      }
-
-      container.appendChild(card);
     });
   });
 
-  if (window.MathJax) {
-    MathJax.typesetPromise();
+  if (respuesta === "") {
+    mensajeBot(
+      "No encontré ejercicios para ese tema.<br>" +
+      "Probá con otra palabra clave."
+    );
+  } else {
+    mensajeBot(respuesta);
   }
 }
-
-
