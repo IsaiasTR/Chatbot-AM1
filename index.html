@@ -3,27 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Chatbot AM1 – Ejercicios</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- MathJax para LaTeX -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Chatbot AM1</h1>
-    <p>Buscá ejercicios por tema o palabra clave</p>
+  <header>
+    <h1>Análisis Matemático I</h1>
+    <p>Guías de ejercicios — visualización limpia</p>
+  </header>
 
-    <input
-      type="text"
-      id="pregunta"
-      placeholder="Ej:Funciones lineales, cuadráticas, etc"
-    >
+  <main>
+    <div id="chat-container">
+      <!-- Los ejercicios se renderizan acá -->
+    </div>
+  </main>
 
-    <button onclick="responder()">Buscar</button>
-
-    <pre id="respuesta"></pre>
-  </div>
+  <footer>
+    <p>Cátedra AM1 · Uso académico</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
 </html>
-
