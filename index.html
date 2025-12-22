@@ -31,16 +31,23 @@
     <p>Guías de ejercicios — visualización limpia</p>
   </header>
 
-  <main>
-    <div class="buscador">
-     <input id="inputPregunta" placeholder="Ej: límite, función, continuidad">
-     <button onclick="buscar()">Buscar</button>
-     </div>
+  <main class="chat-wrapper">
 
-    <div id="chat-container">
-      <!-- Los ejercicios se renderizan acá -->
+    <div id="chat-container" class="chat-container">
+      <!-- Mensajes -->
     </div>
+
+    <div class="chat-input">
+      <input
+        id="inputPregunta"
+        type="text"
+        placeholder="Escribí un tema (ej: límite, función)"
+        onkeydown="if(event.key==='Enter') buscar()"
+      >
+     <button onclick="buscar()">Enviar</button>
+     </div>
   </main>
+
 
   <footer>
     <p>Cátedra AM1 · Uso académico</p>
