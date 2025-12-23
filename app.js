@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       ejercicios = data;
       mensajeBot(
-        "Hola 👋 Soy el asistente virtual de Análisis Matemático 1 - CÁTEDRA: VAZQUEZ MAGNANI.<br>" +
-        "Buscá ejercicios por tema (ej: funciones lineales, límites, derivadas, etc)."
+        "Hola 👋 Soy el asistente virtual de <strong>Análisis Matemático 1</strong>.<br>" +
+        "Cátedra: <strong>Vázquez Magnani</strong>.<br><br>" +
+        "Podés buscar por tema (ej: funciones lineales) o pedir la <em>resolución del ejercicio 1</em>."
       );
     })
     .catch(() => {
@@ -36,31 +37,51 @@ function mensajeBot(html) {
 
 function buscar() {
   const input = document.getElementById("inputPregunta");
-  const texto = input.value.trim().toLowerCase();
+  const textoOriginal = input.value.trim();
+  const texto = textoOriginal.toLowerCase();
   if (!texto) return;
 
-  mensajeUsuario(input.value);
+  mensajeUsuario(textoOriginal);
   input.value = "";
 
   let respuesta = "";
   let encontrados = 0;
 
+  // detectar pedido de resolución
+  const pedirResolucion = texto.includes("resolucion");
+  const numeroMatch = texto.match(/\d+/);
+  const numeroEjercicio = numeroMatch ? parseInt(numeroMatch[0]) : null;
+
   ejercicios.forEach(bloque => {
-    bloque.enunciados.forEach(ej => {
+    bloque.ejercicios.forEach(ej => {
 
       const contenido =
-        (ej.texto || "") +
-        (ej.items ? ej.items.join(" ") : "") +
+        bloque.titulo +
+        " " +
+        ej.enunciado +
+        " " +
         (ej.funciones ? ej.funciones.join(" ") : "") +
-        (ej.sistemas ? ej.sistemas.join(" ") : "");
+        (ej.consignas ? ej.consignas.join(" ") : "");
 
-      if (contenido.toLowerCase().includes(texto) && encontrados < 3) {
+      // PEDIDO DE RESOLUCIÓN
+      if (pedirResolucion && numeroEjercicio === ej.numero && ej.resolucion) {
+        respuesta += `<strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>`;
+        respuesta += `<strong>Ejercicio ${ej.numero}</strong><br>`;
+        respuesta += `<em>${ej.enunciado}</em><br><br>`;
+        respuesta += "<strong>Resolución:</strong><ul>";
+        ej.resolucion.forEach(r => {
+          respuesta += `<li>${r}</li>`;
+        });
+        respuesta += "</ul><br>";
+        encontrados++;
+      }
+
+      // BÚSQUEDA NORMAL
+      if (!pedirResolucion && contenido.toLowerCase().includes(texto) && encontrados < 3) {
 
         respuesta += `<strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>`;
-
-        if (ej.texto) {
-          respuesta += `${ej.texto}<br>`;
-        }
+        respuesta += `<strong>Ejercicio ${ej.numero}</strong><br>`;
+        respuesta += `${ej.enunciado}<br>`;
 
         if (ej.funciones) {
           respuesta += "<ul>";
@@ -70,14 +91,10 @@ function buscar() {
           respuesta += "</ul>";
         }
 
-        if (ej.items) {
-          respuesta += ej.items.join(" ") + "<br>";
-        }
-
-        if (ej.sistemas) {
+        if (ej.consignas) {
           respuesta += "<ul>";
-          ej.sistemas.forEach(s => {
-            respuesta += `<li>${s}</li>`;
+          ej.consignas.forEach(c => {
+            respuesta += `<li>${c}</li>`;
           });
           respuesta += "</ul>";
         }
@@ -90,8 +107,10 @@ function buscar() {
 
   if (respuesta === "") {
     mensajeBot(
-      "No encontré ejercicios para ese tema.<br>" +
-      "Probá con otra palabra clave."
+      "No encontré información para esa consulta.<br>" +
+      "Probá con:<br>" +
+      "• funciones lineales<br>" +
+      "• resolución ejercicio 1"
     );
   } else {
     mensajeBot(respuesta);
