@@ -1,20 +1,6 @@
 [
   {
     "archivo": "Guia 1.pdf",
-    "pagina": 1,
-    "titulo": "Práctica 1 – Funciones",
-    "enunciados": [
-      {
-        "numero": 0,
-        "texto": "Indicar cuáles de los gráficos dados a continuación representan una función.",
-        "latex": "$$f : \\mathbb{R} \\to \\mathbb{R}$$",
-        "observacion": "En caso afirmativo, indicar el conjunto imagen.",
-        "items": ["a)", "b)", "c)", "d)", "e)", "f)", "g)"]
-      }
-    ]
-  },
-  {
-    "archivo": "Guia 1.pdf",
     "pagina": 2,
     "titulo": "Funciones lineales",
     "enunciados": [
@@ -28,15 +14,14 @@
           "$$f(x) = 3(x - 1)$$",
           "$$f(x) = -3x$$",
           "$$f(x) = 3$$"
+        ],
+        "resolucion": [
+          "Identificamos la pendiente $$m$$ y la ordenada al origen $$b$$.",
+          "Si $$m>0$$ la recta es creciente.",
+          "Si $$m<0$$ la recta es decreciente.",
+          "Si $$b=0$$ pasa por el origen."
         ]
       },
-      "resolucion": [
-        "Identificamos la pendiente $$m$$ y la ordenada al origen $$b$$.",
-        "Si $$m>0$$ la recta es creciente.",
-        "Si $$m<0$$ la recta es decreciente.",
-        "Si $$b=0$$ pasa por el origen."
-       ]
-      ,
       {
         "numero": 2,
         "subitems": [
@@ -47,69 +32,6 @@
         "latex": "$$C_0,\\; C_+,\\; C_-$$"
       }
     ]
-  },
-  {
-    "archivo": "Guia 1.pdf",
-    "pagina": 3,
-    "titulo": "Sistemas de ecuaciones",
-    "enunciados": [
-      {
-        "numero": 8,
-        "texto": "Resolver los siguientes sistemas de ecuaciones analítica y gráficamente:",
-        "sistemas": [
-          "$$\\begin{cases} y = -3x - 1 \\\\ x + 2y = 3 \\end{cases}$$",
-          "$$\\begin{cases} y = 3x - 5 \\\\ 2y - 6x + 10 = 0 \\end{cases}$$",
-          "$$\\begin{cases} y = 3x + 1 \\\\ y = 3x - 5 \\end{cases}$$",
-          "$$\\begin{cases} 3x - 2y = 9 \\\\ 2x + 4y = 2 \\end{cases}$$"
-        ]
-      }
-    ]
-  },
-  {
-    "archivo": "Guia 1.pdf",
-    "pagina": 4,
-    "titulo": "Funciones cuadráticas",
-    "enunciados": [
-      {
-        "numero": 9,
-        "texto": "Graficar las siguientes funciones cuadráticas y hallar las coordenadas del vértice:",
-        "funciones": [
-          "$$y = x^2$$",
-          "$$y = x^2 - 1$$",
-          "$$y = (x - 1)^2$$",
-          "$$y = -x^2$$",
-          "$$y = 4x^2$$",
-          "$$y = (x + 1)^2 - 3$$",
-          "$$y = x^2 - 3x - 4$$"
-        ]
-      }
-    ]
-  },
-  {
-    "archivo": "Guia 1.pdf",
-    "pagina": 5,
-    "titulo": "Funciones exponenciales y logarítmicas",
-    "enunciados": [
-      {
-        "numero": 19,
-        "texto": "Graficar las siguientes funciones exponenciales:",
-        "funciones": [
-          "$$y = e^x$$",
-          "$$y = e^{-x}$$",
-          "$$y = 2^x$$",
-          "$$y = \\left(\\frac{1}{2}\\right)^x$$"
-        ]
-      },
-      {
-        "numero": 20,
-        "texto": "Graficar las siguientes funciones logarítmicas:",
-        "funciones": [
-          "$$y = \\ln x$$",
-          "$$y = \\ln(x + 1)$$",
-          "$$y = \\log x$$",
-          "$$y = \\log(x - 3) - 1$$"
-        ]
-      }
-    ]
   }
 ]
+
