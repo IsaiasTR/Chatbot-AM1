@@ -8,13 +8,13 @@
         "numero": 1,
         "enunciado": "Escribir como intervalo o unión de intervalos y hallar si existe supremo e ínfimo",
         "expresiones": [
-          "$$\frac{x-5}{x+1}<0$$",
-          "$$\frac{x}{5(x+3)}-\frac{1}{7}<\frac{1}{x+3}$$"
+          "$$\\frac{x-5}{x+1}<0$$",
+          "$$\\frac{x}{5(x+3)}-\\frac{1}{7}<\\frac{1}{x+3}$$"
         ],
         "resolucion": [
           "Dado que el segundo miembro es cero, podemos aplicar directamente la formula.",
-          "$$\frac{a}{b}<0$$",
-          "$$(a<0 \cap b>0) \cup (a>0 \cap b<0)$$"
+          "$$\\frac{a}{b}<0$$",
+          "$$(a<0 \\cap b>0) \cup (a>0 \\cap b<0)$$"
         ]
       },
       {
