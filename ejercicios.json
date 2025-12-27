@@ -1,36 +1,33 @@
 [
   {
     "archivo": "Guia 1.pdf",
-    "pagina": 2,
+    "pagina": 1,
     "titulo": "Inecuaciones Racionales",
     "ejercicios": [
       {
-        "numero": 1,
-        "enunciado": "Escribir como intervalo o unión de intervalos y hallar si existe supremo e ínfimo",
+        "numero": 2,
+        "enunciado": "Escribir el conjunto como intervalo o unión de intervalos y hallar si existen supremo e ínfimo",
         "expresiones": [
-          "\\frac{x-5}{x+1}<0",
-          "\\frac{x}{5(x+3)}-\\frac{1}{7}<\\frac{1}{x+3}"
+          "\\frac{4x-3}{3x+1}>\\frac{4}{3}"
         ],
         "resolucion": [
-          "Primera Opción: Puntos Críticos.",
-          "$$\\frac{x-5}{x+1}<0$$",
-          "Un cociente es negativo cuando el numerador y el denominador tienen signos opuestos.",
-          "Los puntos críticos son:",
-          "$$x-5=0 \\Rightarrow x=5$$",
-          "$$x+1=0 \\Rightarrow x=-1$$",
-          "Se analizan los intervalos determinados por estos puntos.",
-          "La desigualdad se cumple en el intervalo:",
-          "$$(-1,5)$$",
-          "El ínfimo es $$-1$$ y el supremo es $$5$$. No existen mínimo ni máximo.",
-          "Segunda Opción: Formula",
-          "Dado que el segundo miembro es cero, podemos aplicar directamente la formula.",
-          "$$\\frac{a}{b}<0$$",
-          "$$(a<0 \\cap b>0) \\cup (a>0 \\cap b<0)$$",
-          "$$(x-5<0 \\cap x+1>0) \\cup (x-5>0 \\cap x+1<0)$$"
+          "$$\textbf{Primera Opción:}$$ Puntos Críticos.",
+          "Pasamos todos los términos a un solo miembro.",
+          "$$\\frac{4x-3}{3x+1}-\\frac{4}{3}>0$$",
+          "Unificamos denominador.",
+          "$$\\frac{3(4x-3)-4(3x+1)}{3(3x+1)}>0$$",
+          "Simplificamos el numerador.",
+          "$$\\frac{-13}{3(3x+1)}>0$$",
+          "La fracción es positiva cuando el denominador es negativo.",
+          "$$3x+1<0$$",
+          "$$x<-\\frac{1}{3}$$",
+          "La solución es el intervalo:",
+          "$$(-\\infty,-\\tfrac{1}{3})$$",
+          "No existen mínimo ni máximo. El supremo es $$-\\tfrac{1}{3}$$."
         ]
       },
       {
-        "numero": 2,
+        "numero": 4,
         "enunciado": "Analizar la función",
         "consignas": [
           "Indicar dominio e imagen",
@@ -51,7 +48,7 @@
     "titulo": "Integrales",
     "ejercicios": [
       {
-        "numero": 3,
+        "numero": 5,
         "enunciado": "Calcular las siguientes integrales indefinidas",
         "expresiones": [
           "\\int x^2 \\, dx",
