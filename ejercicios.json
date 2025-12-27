@@ -14,7 +14,7 @@
         "resolucion": [
           "Dado que el segundo miembro es cero, podemos aplicar directamente la formula.",
           "$$\\frac{a}{b}<0$$",
-          "$$(a<0 \\cap b>0) \cup (a>0 \\cap b<0)$$"
+          "$$(a<0 \\cap b>0) \\cup (a>0 \\cap b<0)$$"
         ]
       },
       {
