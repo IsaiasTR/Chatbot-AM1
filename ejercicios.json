@@ -22,7 +22,7 @@
           "La desigualdad se cumple en el intervalo:",
           "$$(-1,5)$$",
           "El ínfimo es $$-1$$ y el supremo es $$5$$. No existen mínimo ni máximo.",
-          "Segunda Opción: Formula"
+          "Segunda Opción: Formula",
           "Dado que el segundo miembro es cero, podemos aplicar directamente la formula.",
           "$$\\frac{a}{b}<0$$",
           "$$(a<0 \\cap b>0) \\cup (a>0 \\cap b<0)$$",
