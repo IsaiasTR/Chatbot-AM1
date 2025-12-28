@@ -231,6 +231,52 @@
           "La solución es:",
           "$$Dom(f)=(-\\infty,-3] \\cup (\\frac{2}{3},+\\infty)$$"
           ]
+       },
+      {
+        "numero": 14,
+        "enunciado": "Escribir el conjunto como intervalo o unión de intervalos y hallar si existen supremo e ínfimo",
+        "expresiones": [
+          "\\frac{6x}{4x-7}\\geq 2"
+        ],
+        "resolucion": [
+           "Pasamos todos los términos a un solo miembro.",
+           "$$\\frac{6x}{4x-7}-2 \\geq 0$$",
+           "Expresamos el 2 con el mismo denominador.",
+           "$$\\frac{6x}{4x-7}-\\frac{2(4x-7)}{4x-7} \\geq 0$$",
+           "Unificamos y simplificamos el numerador.",
+           "$$\\frac{6x-8x+14}{4x-7} \\geq 0$$",
+           "$$\\frac{-2x+14}{4x-7} \\geq 0$$",
+           "Simplificamos el numerador.",
+           "$$\\frac{-2(x-7)}{4x-7} \\geq 0$$",
+           "Multiplicamos numerador y denominador por $$-1$$ (cambia el signo de la desigualdad).",
+           "$$\\frac{2(x-7)}{4x-7} \\leq 0$$",
+           "<strong>PRIMERA OPCIÓN:</strong> Método de Puntos Críticos.",
+           "Los puntos críticos se obtienen cuando el numerador o el denominador se anulan.",
+           "$$x-7=0 \\Rightarrow x=7$$",
+           "$$4x-7=0 \\Rightarrow x=\\frac{7}{4} \\; (\\text{no pertenece al dominio})$$",
+           "Se analizan los intervalos determinados por los puntos críticos.",
+           "Dibujás una recta numérica y en ella obtenés los siguientes intervalos:",
+           "$$(-\\infty,\\frac{7}{4})$$, $$ (\\frac{7}{4},7)$$ y $$ (7,+\\infty)$$",
+           "Analizamos el signo de la expresión en cada intervalo.",
+           "$$(-\\infty,\\frac{7}{4}):\\; positivo$$",
+           "$$(\\frac{7}{4},7):\\; negativo$$",
+           "$$(7,+\\infty):\\; positivo$$",
+           "Como la desigualdad es menor o igual que cero, tomamos donde la expresión es negativa o nula.",
+           "La solución es el intervalo:",
+           "$$x \\in (\\frac{7}{4},7]$$",
+           "El mínimo es $$\\frac{7}{4}$$ (no pertenece al conjunto).",
+           "El máximo es $$7$$.",
+           "El ínfimo es $$\\frac{7}{4}$$.",
+           "El supremo es $$7$$.",
+           "<strong>SEGUNDA OPCIÓN:</strong> Análisis directo de signos.",
+           "Para que la fracción sea menor o igual que cero, numerador y denominador deben tener distinto signo o el numerador ser nulo.",
+           "Caso 1: Numerador negativo y denominador positivo.",
+           "$$x-7<0 \\; \\text{y} \\; 4x-7>0 \\Rightarrow \\frac{7}{4}<x<7$$",
+           "Caso 2: Numerador nulo.",
+           "$$x=7$$",
+           "La solución es:",
+           "$$x \\in (\\frac{7}{4},7]$$"
+          ]
        }
     ]
   }
