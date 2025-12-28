@@ -65,8 +65,8 @@
           "$$(16,+\\infty):\\; negativo$$",
           "La solución es el intervalo:",
           "$$x \\in (0,16]$$",
-          "El mínimo no existe.",
-          "El máximo es $$16$$.",
+          "El mínimo no existe",
+          "El máximo es $$16$$",
           "El ínfimo es $$0$$",
           "El supremo es $$16$$",
           "<strong>SEGUNDA OPCIÓN:</strong> Análisis directo de signos.",
@@ -77,8 +77,8 @@
           "$$x=16$$",
           "La solución es:",
           "$$x \\in (0,16]$$",
-          "El mínimo no existe.",
-          "El máximo es $$16$$.",
+          "El mínimo no existe",
+          "El máximo es $$16$$",
           "El ínfimo es $$0$$",
           "El supremo es $$16$$"
          ]
