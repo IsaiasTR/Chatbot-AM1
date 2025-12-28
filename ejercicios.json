@@ -110,39 +110,59 @@
          "La solución es la unión de intervalos:",
          "$$x \\in (-\\infty,-\\frac{1}{2}) \\cup (0,+\\infty)$$",
          "No existe mínimo ni máximo",
-         "El ínfimo es $$-\\infty$$.",
-         "El supremo es $$+\\infty$$.",
-         "<strong>SEGUNDA OPCIÓN:</strong> Análisis directo de signos.",
-         "Para que la fracción sea mayor que cero, numerador y denominador deben tener el mismo signo.",
-         "Caso 1: Numerador positivo y denominador positivo.",
+         "El conjunto no está acotado inferior ni superiormente",
+         "<strong>SEGUNDA OPCIÓN:</strong> Análisis directo de signos",
+         "Para que la fracción sea mayor que cero, numerador y denominador deben tener el mismo signo",
+         "Caso 1: Numerador positivo y denominador positivo",
          "$$2x+1>0 \\; \\text{y} \\; x>0 \\Rightarrow x>0$$",
-         "Caso 2: Numerador negativo y denominador negativo.",
+         "Caso 2: Numerador negativo y denominador negativo",
          "$$2x+1<0 \\; \\text{y} \\; x<0 \\Rightarrow x< -\\frac{1}{2}$$",
-         "La solución es:",
+         "La solución es:"
          "$$x \\in (-\\infty,-\\frac{1}{2}) \\cup (0,+\\infty)$$"
         ]
-      }
-    ]
-  },
-  {
-    "archivo": "Guia 1.pdf",
-    "pagina": 5,
-    "titulo": "Integrales",
-    "ejercicios": [
+      },
       {
-        "numero": 5,
-        "enunciado": "Calcular las siguientes integrales indefinidas",
+      "numero": 8,
+        "enunciado": "Escribir el conjunto como intervalo o unión de intervalos y hallar si existen supremo e ínfimo",
         "expresiones": [
-          "\\int x^2 \\, dx",
-          "\\int (3x - 1) \\, dx",
-          "\\int e^x \\, dx"
+          "\\frac{5x-1}{x+3}>6"
         ],
-        "resolucion": [
-          "Aplicamos la regla de la potencia.",
-          "$$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$$",
-          "Se agrega la constante de integración $$+C$$."
+      "resolucion": [
+        "Pasamos todos los términos a un solo miembro.",
+        "$$\\frac{5x-1}{x+3}-6>0$$",
+        "Expresamos el 6 con el mismo denominador.",
+        "$$\\frac{5x-1}{x+3}-\\frac{6(x+3)}{x+3}>0$$",
+        "Unificamos y simplificamos el numerador.",
+        "$$\\frac{5x-1-6x-18}{x+3}>0$$",
+        "$$\\frac{-x-19}{x+3}>0$$",
+        "Multiplicamos numerador y denominador por $$-1$$ (cambia el signo de la desigualdad).",
+        "$$\\frac{x+19}{x+3}<0$$",
+        "<strong>PRIMERA OPCIÓN:</strong> Método de Puntos Críticos.",
+        "Los puntos críticos se obtienen cuando el numerador o el denominador se anulan.",
+        "$$x+19=0 \\Rightarrow x=-19$$",
+        "$$x+3=0 \\Rightarrow x=-3 \\; (\\text{no pertenece al dominio})$$",
+        "Se analizan los intervalos determinados por los puntos críticos.",
+        "Dibujás una recta numérica y en ella obtenés los siguientes intervalos:",
+        "$$(-\\infty,-19)$$, $$(-19,-3)$$ y $$(-3,+\\infty)$$",
+        "Analizamos el signo de la expresión en cada intervalo.",
+        "$$(-\\infty,-19):\\; positivo$$",
+        "$$(-19,-3):\\; negativo$$",
+        "$$(-3,+\\infty):\\; positivo$$",
+        "Como la desigualdad es estricta menor que cero, tomamos donde la expresión es negativa.",
+        "La solución es el intervalo:",
+        "$$x \\in (-19,-3)$$",
+        "No existe mínimo ni máximo",
+        "El ínfimo es $$-19$$.",
+        "El supremo es $$-3$$.",
+        "<strong>SEGUNDA OPCIÓN:</strong> Análisis directo de signos.",
+        "Para que la fracción sea negativa, numerador y denominador deben tener distinto signo.",
+        "Caso 1: Numerador positivo y denominador negativo.",
+        "$$x+19>0 \\; \\text{y} \\; x+3<0 \\Rightarrow -19<x<-3$$",
+        "Caso 2: Numerador negativo y denominador positivo.",
+        "$$x+19<0 \\; \\text{y} \\; x+3>0 \\Rightarrow \\text{imposible}$$",
+        "La solución es:",
+        "$$x \\in (-19,-3)$$"
         ]
-      }
     ]
   }
 ]
