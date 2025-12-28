@@ -202,6 +202,35 @@
           "No existe mínimo ni máximo",
           "El supremo es $$-\\frac{5}{2}$$"
         ]
+       },
+      {
+       "numero": 12,
+       "enunciado": "Escribir el dominio de f(x) como intervalo o unión de intervalos",
+       "expresiones": [
+          "f(x)=\\sqrt{\\frac{x+3}{3x-2}}"
+        ],
+       "resolucion": [
+          "Para que la función esté definida, el radicando debe ser mayor o igual que cero y el denominador distinto de cero.",
+          "$$\\frac{x+3}{3x-2} \\geq 0$$",
+          "Además, el denominador no puede anularse.",
+          "$$3x-2 \\neq 0$$",
+          "<strong>Puntos críticos:</strong>",
+          "Se anula el numerador:",
+          "$$x+3=0 \\Rightarrow x=-3$$",
+          "Se anula el denominador:",
+          "$$3x-2=0 \\Rightarrow x=\\frac{2}{3} \\; (\\text{no pertenece al dominio})$$",
+          "Se analizan los intervalos determinados por los puntos críticos.",
+          "Dibujás una recta numérica y en ella obtenés los siguientes intervalos:",
+          "$$(-\\infty,-3)$$, $$(-3,\\frac{2}{3})$$ y $$ (\\frac{2}{3},+\\infty)$$",
+          "Analizamos el signo del radicando en cada intervalo.",
+          "$$(-\\infty,-3):\\; positivo$$",
+          "$$(-3,\\frac{2}{3}):\\; negativo$$",
+          "$$(\\frac{2}{3},+\\infty):\\; positivo$$",
+          "Como el radicando debe ser mayor o igual que cero, tomamos los intervalos donde es positivo o nulo.",
+          "El valor $$x=-3$$ se incluye porque anula el numerador y no el denominador.",
+          "La solución es:",
+          "$$Dom(f)=(-\\infty,-3] \\cup (\\frac{2}{3},+\\infty)$$"
+          ]
        }
     ]
   }
