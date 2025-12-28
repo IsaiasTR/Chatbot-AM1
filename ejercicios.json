@@ -40,7 +40,7 @@
       },
       {
         "numero": 4,
-        "enunciado": "Escribir el conjunto como intervalo o unión de intervalos y hallar si existen supremo e ínfimo",,
+        "enunciado": "Escribir el conjunto como intervalo o unión de intervalos y hallar si existen supremo e ínfimo",
         "expresiones": [
           "\\frac{2x+7}{3x}+\\frac{3}{x}\\geq 1"
         ],
@@ -65,8 +65,10 @@
           "$$(16,+\\infty):\\; negativo$$",
           "La solución es el intervalo:",
           "$$x \\in (0,16]$$",
-          "El mínimo es $$0$$ (no pertenece al conjunto).",
+          "El mínimo no existe.",
           "El máximo es $$16$$.",
+          "El ínfimo es $$0$$",
+          "El supremo es $$16$$",
           "<strong>SEGUNDA OPCIÓN:</strong> Análisis directo de signos.",
           "Para que la fracción sea mayor o igual que cero, numerador y denominador deben tener el mismo signo.",
           "Caso 1: Numerador positivo y denominador positivo.",
@@ -74,7 +76,11 @@
           "Caso 2: Numerador nulo.",
           "$$x=16$$",
           "La solución es:",
-          "$$x \\in (0,16]$$"
+          "$$x \\in (0,16]$$",
+          "El mínimo no existe.",
+          "El máximo es $$16$$.",
+          "El ínfimo es $$0$$",
+          "El supremo es $$16$$",
          ]
       }
     ]
