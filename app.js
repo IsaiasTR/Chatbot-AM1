@@ -1,113 +1,154 @@
-const archivosJSON = [
-  "guia1.json",
-  "guia2.json",
-  "guia3.json",
-  "guia4.json",
-  "guia5.json",
-  "guia6.json",
-  "guia7.json",
-  "guia8.json"
-];
-
-let guias = [];
-
-const chatMessages = document.getElementById("chat-messages");
-const userInput = document.getElementById("user-input");
-const sendBtn = document.getElementById("send-btn");
+let ejercicios = [];
 
 /* ===============================
-   CARGA DE JSON
+   CARGA DE MÚLTIPLES JSON
 ================================ */
 
-Promise.all(
-  archivosJSON.map(ruta => fetch(ruta).then(r => r.json()))
-).then(data => {
-  guias = data;
-  agregarMensajeBot("Chatbot listo. Indicá guía y ejercicio.");
+document.addEventListener("DOMContentLoaded", () => {
+  const archivos = [
+    "guia1.json",
+    "guia2.json"
+  ];
+
+  Promise.all(
+    archivos.map(a => fetch(a).then(r => r.json()))
+  )
+    .then(data => {
+      // Unificamos todos los JSON en un solo array
+      ejercicios = data.flat();
+
+      mensajeBot(
+        "Hola 👋 Soy Isaias-Bot, el asistente virtual de <strong>Análisis Matemático 1</strong>.<br>" +
+        "Cátedra: <strong>Vázquez Magnani</strong>.<br><br>" +
+        "Podés buscar por tema (ej: <em>inecuaciones</em>, <em>funciones</em>)<br>" +
+        "o pedir la <em>resolución del ejercicio 2</em>."
+      );
+    })
+    .catch(() => {
+      mensajeBot("❌ Error al cargar los ejercicios.");
+    });
 });
 
 /* ===============================
-   CHAT
+   MENSAJES
 ================================ */
 
-sendBtn.addEventListener("click", procesarEntrada);
-userInput.addEventListener("keypress", e => {
-  if (e.key === "Enter") procesarEntrada();
-});
+function mensajeUsuario(texto) {
+  const chat = document.getElementById("chat-container");
+  const div = document.createElement("div");
+  div.className = "mensaje usuario";
+  div.textContent = texto;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
 
-function procesarEntrada() {
-  const texto = userInput.value.trim();
+function mensajeBot(html) {
+  const chat = document.getElementById("chat-container");
+  const div = document.createElement("div");
+  div.className = "mensaje bot";
+  div.innerHTML = html;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+
+  if (window.MathJax) {
+    MathJax.typesetPromise();
+  }
+}
+
+/* ===============================
+   BÚSQUEDA
+================================ */
+
+function buscar() {
+  const input = document.getElementById("inputPregunta");
+  const textoOriginal = input.value.trim();
+  const texto = textoOriginal.toLowerCase();
+
   if (!texto) return;
 
-  agregarMensajeUsuario(texto);
-  userInput.value = "";
+  mensajeUsuario(textoOriginal);
+  input.value = "";
 
-  const guia = extraerNumero(texto, /gu[ií]a\s*(\d+)/i);
-  const ejercicio = extraerNumero(texto, /ejercicio\s*(\d+)/i);
+  let respuesta = "";
+  let encontrados = 0;
 
-  if (!guia || !ejercicio) {
-    agregarMensajeBot("Indicá claramente guía y ejercicio.");
-    return;
-  }
+  const pedirResolucion =
+    texto.includes("resolucion") || texto.includes("resolución");
 
-  const ej = buscarEjercicio(guia, ejercicio);
-  if (!ej) {
-    agregarMensajeBot("No encontré ese ejercicio.");
-    return;
-  }
+  const numeroMatch = texto.match(/\d+/);
+  const numeroEjercicio = numeroMatch ? parseInt(numeroMatch[0]) : null;
 
-  mostrarEjercicio(ej);
-}
+  ejercicios.forEach(bloque => {
+    bloque.ejercicios.forEach(ej => {
 
-/* ===============================
-   UTILIDADES
-================================ */
+      const contenido =
+        bloque.titulo + " " +
+        ej.enunciado + " " +
+        (ej.expresiones ? ej.expresiones.join(" ") : "");
 
-function extraerNumero(texto, regex) {
-  const m = texto.match(regex);
-  return m ? parseInt(m[1]) : null;
-}
+      /* ========= RESOLUCIÓN ========= */
+      if (
+        pedirResolucion &&
+        numeroEjercicio === ej.numero &&
+        ej.resolucion
+      ) {
+        respuesta += `<strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>`;
+        respuesta += `<strong>Ejercicio ${ej.numero}</strong><br>`;
+        respuesta += `<em>${ej.enunciado}</em><br><br>`;
 
-function buscarEjercicio(nroGuia, nroEj) {
-  const guia = guias.find(g => g.guia === nroGuia);
-  if (!guia) return null;
-  return guia.ejercicios.find(e => e.numero === nroEj);
-}
+        /* EXPRESIONES */
+        if (ej.expresiones) {
+          respuesta += "<strong>Expresión:</strong><ul>";
+          ej.expresiones.forEach(e => {
+            respuesta += `<li>$$${e}$$</li>`;
+          });
+          respuesta += "</ul>";
+        }
 
-/* ===============================
-   RENDER
-================================ */
+        /* RESOLUCIÓN */
+        respuesta += "<strong>Resolución:</strong><ul>";
+        ej.resolucion.forEach(r => {
+          respuesta += `<li>${r}</li>`;
+        });
+        respuesta += "</ul><br>";
 
-function mostrarEjercicio(ej) {
-  let html = "";
+        encontrados++;
+      }
 
-  if (ej.expresiones) {
-    html += "<strong>Expresión:</strong>";
-    ej.expresiones.forEach(e => {
-      html += `<div>${e}</div>`;
+      /* ========= BÚSQUEDA POR TEMA ========= */
+      if (
+        !pedirResolucion &&
+        contenido.toLowerCase().includes(texto) &&
+        encontrados < 3
+      ) {
+        respuesta += `<strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>`;
+        respuesta += `<strong>Ejercicio ${ej.numero}</strong><br>`;
+        respuesta += `${ej.enunciado}<br>`;
+
+        if (ej.expresiones) {
+          respuesta += "<ul>";
+          ej.expresiones.forEach(e => {
+            respuesta += `<li>$$${e}$$</li>`;
+          });
+          respuesta += "</ul>";
+        }
+
+        respuesta += "<br>";
+        encontrados++;
+      }
     });
+  });
+
+  if (respuesta === "") {
+    mensajeBot(
+      "No encontré información para esa consulta.<br><br>" +
+      "Probá con:<br>" +
+      "• inecuaciones racionales<br>" +
+      "• funciones<br>" +
+      "• resolución ejercicio 4"
+    );
+  } else {
+    mensajeBot(respuesta);
   }
-
-  if (ej.resolucion) {
-    html += "<strong>Resolución:</strong>";
-    ej.resolucion.forEach(p => {
-      html += `<div>${p}</div>`;
-    });
-  }
-
-  agregarMensajeBot(html);
-  MathJax.typesetPromise();
 }
 
-function agregarMensajeUsuario(texto) {
-  chatMessages.innerHTML += `
-    <div class="message user">${texto}</div>
-  `;
-}
-
-function agregarMensajeBot(html) {
-  chatMessages.innerHTML += `
-    <div class="message bot">${html}</div>
-  `;
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-}
