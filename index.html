@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>CHATBOT AM1 – Ejercicios</title>
+  <meta charset="UTF-8" />
+  <title>Chatbot AM1</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
 
-  <link rel="stylesheet" href="style.css">
-
+  <!-- MathJax -->
   <script>
     window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
     };
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 
 <body>
-
-  <header>
-    <h1>CHATBOT - ANÁLISIS MATEMÁTICO 1</h1>
-    <h2>CÁTEDRA: VAZQUEZ MAGNANI</h2>
-    <p>ACÁ PODÉS CONSULTAR POR LOS EJERCICIOS DE LAS GUÍAS</p>
-  </header>
-
-  <main class="chat-wrapper">
-
-    <!-- CONTENEDOR DEL CHAT (VACÍO, LO MANEJA app.js) -->
-    <div id="chat-container" class="chat-container"></div>
-
-    <div class="chat-input">
-      <input
-        id="inputPregunta"
-        type="text"
-        placeholder="Escribí un tema (ej: límite, función)"
-        onkeydown="if(event.key==='Enter') buscar()"
-      >
-      <button onclick="buscar()">Enviar</button>
+  <div id="chat-container">
+    <div id="chat-header">
+      Chatbot Análisis Matemático I
     </div>
-  </main>
 
-  <footer>
-    <p>ANÁLISIS MATEMÁTICO 1 - CBC - FCE - UBA</p>
-    <p>
-      Desarrollado por <strong>ISAIAS TENORIO</strong> |
-      <a href="https://github.com/IsaiasTR" target="_blank">Mi GitHub</a>
-    </p>
-  </footer>
+    <div id="chat-messages"></div>
+
+    <div id="chat-input">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Ej: resolución guía 1 ejercicio 2"
+      />
+      <button id="send-btn">Enviar</button>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
 </html>
+
 
