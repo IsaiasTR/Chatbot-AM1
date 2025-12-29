@@ -6,8 +6,7 @@ let ejercicios = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const archivos = [
-    "guia1.json",
-    "guia2.json"
+    "guia1.json"
   ];
 
   Promise.all(
