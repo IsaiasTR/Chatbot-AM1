@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mensajeBot(
         "Hola 👋 Soy Isaias-Bot, el asistente virtual de <strong>Análisis Matemático 1</strong>.<br>" +
         "Cátedra: <strong>Vázquez Magnani</strong>.<br><br>" +
-        "Podés buscar por tema (ej: <em>inecuaciones</em>, <em>funciones</em>)<br>" +
-        "o pedir la <em>resolución del ejercicio 2</em>."
+        "Podés buscar de la siguiente forma (ej: <em>resolucion ejercicio 2 guia 1</em>, <em>resolucion ejercicio 2 guia 2</em>,...)"
       );
     })
     .catch(() => {
@@ -127,8 +126,8 @@ function buscar() {
         ej.resolucion
       ) {
         respuesta += `<strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>`;
-        respuesta += `<strong>Ejercicio ${ej.numero}</strong><br>`;
-        respuesta += `<em>${ej.enunciado}</em><br><br>`;
+        respuesta += `<strong>Ejercicio ${ej.numero}:</strong><br>`;
+        respuesta += `<strong>${ej.enunciado}</strong><br><br>`;
 
         if (ej.expresiones) {
           ej.expresiones.forEach(e => {
@@ -166,9 +165,9 @@ function buscar() {
     mensajeBot(
       "No encontré información para esa consulta.<br><br>" +
       "Probá con:<br>" +
-      "• inecuaciones racionales<br>" +
-      "• funciones<br>" +
-      "• resolución ejercicio 4 guía 1"
+      "• resolucion ejercicio 2 guia 1<br>" +
+      "• resolucion ejercicio 2 guia 2<br>" +
+      "• resolucion ejercicio 4 guia 3"
     );
   } else {
     mensajeBot(respuesta);
