@@ -101,6 +101,29 @@
           "El denominador se anula y el numerador no, por lo tanto el límite es infinito.",
           "Concluimos que x=4 es una asíntota vertical."
        ]
+      },
+      {
+        "numero": 10,
+        "enunciado": "Hallar la asíntota vertical de la función",
+        "expresiones": [
+         "f(x)=(1+2x^2)^{\\displaystyle \\frac{1}{3x^4}}"
+        ],
+        "resolucion": [
+          "Buscamos los valores donde la función puede presentar una asíntota vertical.",
+          "Observamos que el exponente contiene el término 3x^4 en el denominador, que se anula en x = 0.",
+          "Analizamos el comportamiento de la función cuando x tiende a 0.",
+          "$$\\lim_{x \\to 0} (1+2x^2)^{\\displaystyle \\frac{1}{3x^4}}$$",
+          "Reescribimos la función utilizando la forma exponencial.",
+          "$$(1+2x^2)^{\\displaystyle \\frac{1}{3x^4}} = \\exp\\left( \\frac{1}{3x^4} \\ln(1+2x^2) \\right)$$",
+          "Usamos el desarrollo de \\(\\ln(1+u)\\) cuando u tiende a 0.",
+          "$$\\ln(1+2x^2) \\sim 2x^2 \\quad \\text{cuando} \\quad x \\to 0$$",
+          "Sustituimos en el exponente.",
+          "$$\\frac{1}{3x^4} \\ln(1+2x^2) \\sim \\frac{1}{3x^4} \\cdot 2x^2 = \\frac{2}{3x^2}$$",
+          "El exponente tiende a +\\infty cuando x tiende a 0.",
+          "Por lo tanto, el límite de la función es infinito.",
+          "$$\\lim_{x \\to 0} (1+2x^2)^{\\displaystyle \\frac{1}{3x^4}} = +\\infty$$",
+          "Concluimos que la función tiene una asíntota vertical en x = 0."
+       ]
       }
     ]
   }
