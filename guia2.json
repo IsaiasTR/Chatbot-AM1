@@ -31,6 +31,37 @@
            "Reemplazando:",
            "$$\\frac{1}{2(4)(2+2)} = \\frac{1}{32}$$"
        ]
+      },
+      {
+        "numero": 4,
+        "enunciado": "Calcular:",
+        "expresiones": [
+          "\\lim_{x \\to 5} \\frac{4-\\sqrt{3x+1}}{3-\\sqrt{x+4}}"
+        ],
+          "resolucion": [
+             "Evaluamos el límite por sustitución directa.",
+             "En el numerador:",
+             "$$4 - \\sqrt{3\\cdot 5 + 1} = 4 - \\sqrt{16} = 4 - 4 = 0$$",
+             "En el denominador:",
+             "$$3 - \\sqrt{5 + 4} = 3 - 3 = 0$$",
+             "Se obtiene una indeterminación del tipo $$\\frac{0}{0}$$, por lo que racionalizamos numerador y denominador.",
+             "Multiplicamos numerador y denominador por sus conjugados:",
+             "$$\\frac{4-\\sqrt{3x+1}}{3-\\sqrt{x+4}} \\cdot \\frac{4+\\sqrt{3x+1}}{4+\\sqrt{3x+1}} \\cdot \\frac{3+\\sqrt{x+4}}{3+\\sqrt{x+4}}$$",
+             "Simplificamos cada diferencia de cuadrados.",
+             "Numerador:",
+             "$$(4)^2 - (3x+1) = 16 - 3x - 1 = 15 - 3x$$",
+             "Denominador:",
+             "$$(3)^2 - (x+4) = 9 - x - 4 = 5 - x$$",
+             "Reescribimos la fracción:",
+             "$$\\frac{15 - 3x}{5 - x} \\cdot \\frac{3 + \\sqrt{x+4}}{4 + \\sqrt{3x+1}}$$",
+             "Factorizamos:",
+             "$$15 - 3x = -3(x-5), \\quad 5 - x = -(x-5)$$",
+             "Simplificamos el factor común $$(x-5)$$.",
+             "Evaluamos el límite:",
+             "$$\\lim_{x \\to 5} 3 \\cdot \\frac{3 + \\sqrt{x+4}}{4 + \\sqrt{3x+1}}$$",
+             "Reemplazamos:",
+             "$$3 \\cdot \\frac{3 + 3}{4 + 4} = 3 \\cdot \\frac{6}{8} = \\frac{9}{4}$$"
+        ]
       }
     ]
   }
