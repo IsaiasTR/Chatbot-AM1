@@ -178,7 +178,37 @@
            "$$a-4=2 \\Rightarrow a=6$$",
            "Concluimos que el valor buscado es a=6."
           ]
-      }
-    ]
+        },
+        {
+        "numero": 16,
+        "enunciado": "Hallar a \\in \\mathbb{R} tal que:",
+        "expresiones": [
+           "\\lim_{x \\to +\\infty} \\left(\\frac{3x^2-5}{3x^2+4}\\right)^{\\displaystyle ax^2-2}=e^{9}"
+        ],
+        "resolucion": [
+           "Partimos del límite dado.",
+           "$$\\lim_{x \\to +\\infty} \\left(\\frac{3x^2-5}{3x^2+4}\\right)^{\\displaystyle ax^2-2} = e^{9}$$",
+           "Reescribimos la base dividiendo numerador y denominador por 3x^2.",
+           "$$\\left(\\frac{1-\\frac{5}{3x^2}}{1+\\frac{4}{3x^2}}\\right)^{\\displaystyle ax^2-2}$$",
+           "Tomamos logaritmo natural para estudiar el límite.",
+           "$$\\ln L = \\lim_{x \\to +\\infty} (ax^2-2) \\, \\ln\\left(\\frac{1-\\frac{5}{3x^2}}{1+\\frac{4}{3x^2}}\\right)$$",
+           "Usamos la propiedad del logaritmo del cociente.",
+           "$$\\ln L = \\lim_{x \\to +\\infty} (ax^2-2) \\left[ \\ln\\left(1-\\frac{5}{3x^2}\\right) - \\ln\\left(1+\\frac{4}{3x^2}\\right) \\right]$$",
+           "Aplicamos el desarrollo para \\(\\ln(1+u)\\) cuando u tiende a 0.",
+           "$$\\ln(1+u) \\sim u \\quad \\text{cuando} \\quad u \\to 0$$",
+           "Sustituimos las equivalencias.",
+           "$$\\ln L = \\lim_{x \\to +\\infty} (ax^2-2) \\left( -\\frac{5}{3x^2} - \\frac{4}{3x^2} \\right)$$",
+           "Simplificamos la expresión.",
+           "$$\\ln L = \\lim_{x \\to +\\infty} (ax^2-2) \\left( -\\frac{3}{x^2} \\right)$$",
+           "Calculamos el límite.",
+           "$$\\ln L = -3a$$",
+           "Como el límite vale e^{9}, igualamos exponentes.",
+           "$$-3a = 9$$",
+           "Resolvemos la ecuación.",
+           "$$a = -3$$",
+           "Concluimos que el valor buscado es a = -3."
+          ]
+       }
+     ]
   }
 ]
