@@ -213,7 +213,7 @@
         "numero": 18,
         "enunciado": "Dada la función f(x), hallar a sabiendo que f(x) es continua en x=5:",
         "expresiones": [
-           "f(x)=\\begin{cases} \\frac{4x-20}{\\sqrt{x+20}-5} & \\text{si } x>5 \\\\ ax-5 & \\text{si } x \\le 5 \\end{cases}"
+           "f(x)=\\begin{cases} \\dfrac{4x-20}{\\sqrt{x+20}-5} & \\text{si } x>5 \\\\ ax-5 & \\text{si } x \\le 5 \\end{cases}"
         ],
         "resolucion": [
            "Para que f(x) sea continua en x=5 debe cumplirse que el límite cuando x tiende a 5 por derecha sea igual al valor de la función en x=5.",
