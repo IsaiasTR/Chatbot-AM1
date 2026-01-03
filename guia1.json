@@ -316,7 +316,7 @@
       },
       {
         "numero": 18,
-        "enunciado": "Sean A=$${ x \\in \\mathbb{R} / |x-3|<8 }$$  y B = $${ x \\in \\mathbb{R} / |x|<7}$$. Escribir $$A \\cup B$$ como intervalo o unión de intervalos y hallar, si existen supremo e ínfimo de A \\cup B",
+        "enunciado": "Sean A y B. $$A={ x \\in \\mathbb{R} / |x-3|<8 } \\hspace{0.2cm} y \\hspace{0.2cm} B = { x \\in \\mathbb{R} / |x|<7}$$. Escribir $$A \\cap B$$ como intervalo o unión de intervalos y hallar, si existen supremo e ínfimo de A \\cap B",
         "expresiones": [],
         "resolucion": []
       }
