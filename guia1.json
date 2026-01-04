@@ -320,7 +320,7 @@
         "expresiones": [],
         "resolucion": [
            "Determinamos el conjunto A a partir de la desigualdad con valor absoluto.",
-           "$$|x-3|<8 \\Leftrightarrow -8<x-3<8 \\Leftrightarrow -5<x<11$$",
+           "|x-3|<8 $$\\Leftrightarrow$$ -8<x-3<8 $$\\Leftrightarrow$$ -5<x<11",
            "Por lo tanto:",
            "$$A=(-5,11)$$",
            "Determinamos el conjunto B a partir de la desigualdad con valor absoluto.",
