@@ -320,7 +320,7 @@
         "expresiones": [],
         "resolucion": [
            "Determinamos el conjunto A a partir de la desigualdad con valor absoluto.",
-           "|x-3|<8 si y solo si  -8<x-3<8",
+           "$$|x-3|<8 \\textbf{si y solo si}  -8<x-3<8$$",
            "$$-8<x-3<8$$",
            "$$-8+3<x<8+3$$",
            "$$-5<x<11$$",
@@ -335,7 +335,13 @@
            "Determinamos el ínfimo y el supremo del conjunto obtenido.",
            "$$\\inf(A \\cap B) = -5 \\quad , \\quad \\sup(A \\cap B) = 7$$"
            ]
-        }
+        },
+        {
+        "numero": 20,
+        "enunciado": "Escribir el conjunto A como intervalo o unión de intervalos",
+        "expresiones": [
+          "A=\\{x \\in \\matbhh{R} / \\sqrt{x^2+3}-2 \\geq 0\\}"
+        ],
      ]
   }
 ]
