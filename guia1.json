@@ -342,6 +342,9 @@
         "expresiones": [
           "A=\\{x \\in \\matbhh{R} / \\sqrt{x^2+3}-2 \\geq 0\\}"
         ],
-     ]
+        "resolucion": [
+        ]
+       }
+    ]
   }
 ]
