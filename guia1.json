@@ -345,6 +345,18 @@
           "A=\\{x \\in \\mathbb{R} / \\sqrt{x^2+3}-2 \\geq 0\\}"
         ],
         "resolucion": [
+             "Planteamos la desigualdad dada.",
+             "$$\\sqrt{x^2+3}-2 \\geq 0$$",
+             "Sumamos 2 en ambos miembros.",
+             "$$\\sqrt{x^2+3} \\geq 2$$",
+             "Elevamos ambos miembros al cuadrado.",
+             "$$x^2+3 \\geq 4$$",
+             "Restamos 3 en ambos miembros.",
+             "$$x^2 \\geq 1$$",
+             "Resolvemos la desigualdad cuadrática.",
+             "$$x \\leq -1 \\; \\text{o} \\; x \\geq 1$$",
+             "Escribimos el conjunto solución como intervalo.",
+             "$$A = (-\\infty,-1] \\cup [1,\\infty)$$"
         ]
       }
     ]
