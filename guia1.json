@@ -450,7 +450,7 @@
         "numero": 28,
         "enunciado": "Escribir el conjunto A como intervalo o unión de intervalos",
         "expresiones": [
-          "A=\\{x \\in \\mathbb{R} / \\frac{6x}{x^2-1}<0 \\}"
+          "A=\\{x \\in \\mathbb{R} / \\frac{6x}{x^2-1} <0 \\}"
         ],
         "resolucion": [
             "Partimos de la desigualdad dada.",
@@ -468,7 +468,7 @@
             "Por lo tanto:",
             "$$A=(-\\infty,-1) \\cup (0,1)$$"
         ]
-      {
+      }
     ]
   }
 ]
