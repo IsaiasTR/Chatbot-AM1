@@ -494,6 +494,16 @@
              "Por lo tanto:",
              "$$A=(-\\infty,-\\frac{1}{6}] \\cup [1,\\infty)$$"
         ]
+      },
+      {
+         "numero": 32,
+        "enunciado": "Escribir como intervalo o unión de intervalos el dominio de f(x)",
+        "expresiones": [
+          "f(x)=\\sqrt{\\frac{3x}{4-2x}}+\\frac{1}{x-1}"
+        ],
+        "resolucion":[
+          
+        ]
       }
     ]
   }
