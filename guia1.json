@@ -415,6 +415,36 @@
             "Supremo de A: $$\\sup A = 4$$",
             "No existen mínimo ni máximo porque los extremos no pertenecen al conjunto."
         ]
+      },
+      {
+        "numero": 26,
+        "enunciado": "Escribir el conjunto A como intervalo o unión de intervalos",
+        "expresiones": [
+          "A=\\{x \\in \\mathbb{R} / \\frac{3}{x}+\\frac{3}{x+2} <0 \\}"
+        ],
+        "resolucion": [
+            "Partimos de la desigualdad dada.",
+            "$$\\frac{3}{x}+\\frac{3}{x+2}<0$$",
+            "Factorizamos el numerador.",
+            "$$3\\left(\\frac{1}{x}+\\frac{1}{x+2}\\right)<0$$",
+            "Como 3 es positivo, la desigualdad es equivalente a:",
+            "$$\\frac{1}{x}+\\frac{1}{x+2}<0$$",
+            "Unificamos denominador.",
+            "$$\\frac{(x+2)+x}{x(x+2)}<0$$",
+            "Simplificamos el numerador.",
+            "$$\\frac{2x+2}{x(x+2)}<0$$",
+            "Factorizamos.",
+            "$$\\frac{2(x+1)}{x(x+2)}<0$$",
+            "El factor 2 es positivo, por lo que estudiamos el signo de:",
+            "$$\\frac{x+1}{x(x+2)}<0$$",
+            "Determinamos los puntos críticos.",
+            "$$x=-2,\\;-1,\\;0$$",
+            "Analizamos el signo en los intervalos determinados por esos puntos.",
+            "La desigualdad se cumple en los intervalos:",
+            "$$(-\\infty,-2) \\cup (-1,0)$$",
+            "Por lo tanto:",
+            "$$A=(-\\infty,-2) \\cup (-1,0)$$"
+        ]
       }
     ]
   }
