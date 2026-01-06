@@ -445,7 +445,29 @@
             "Por lo tanto:",
             "$$A=(-\\infty,-2) \\cup (-1,0)$$"
         ]
-      }
+      },
+        "numero": 28,
+        "enunciado": "Escribir el conjunto A como intervalo o unión de intervalos",
+        "expresiones": [
+          "A=\\{x \\in \\mathbb{R} / \\frac{6x}{x^2-1}<0 \\}"
+        ],
+        "resolucion": [
+            "Partimos de la desigualdad dada.",
+            "$$\\frac{6x}{x^2-1}<0$$",
+            "Factorizamos el denominador.",
+            "$$\\frac{6x}{(x-1)(x+1)}<0$$",
+            "El factor 6 es positivo, por lo que analizamos el signo de:",
+            "$$\\frac{x}{(x-1)(x+1)}<0$$",
+            "Determinamos los puntos críticos.",
+            "$$x=-1,\\;0,\\;1$$",
+            "Analizamos el signo en los intervalos determinados por esos puntos.",
+            "La desigualdad se cumple cuando el numerador y el denominador tienen signos opuestos.",
+            "Los intervalos solución son:",
+            "$$(-\\infty,-1) \\cup (0,1)$$",
+            "Por lo tanto:",
+            "$$A=(-\\infty,-1) \\cup (0,1)$$"
+        ]
+      {
     ]
   }
 ]
