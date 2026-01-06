@@ -358,6 +358,15 @@
              "Escribimos el conjunto solución como intervalo.",
              "$$A = (-\\infty,-1] \\cup [1,\\infty)$$"
         ]
+      },
+      {
+        "numero": 22,
+        "enunciado": "Escribir el conjunto A como intervalo o unión de intervalos y hallar si existen supremo e ínfimo de A",
+        "expresiones": [
+          "A=\\{x \\in \\mathbb{R} / ln(x^2+x-1)>0\\}"
+        ],
+        "resolucion": [
+        ]
       }
     ]
   }
