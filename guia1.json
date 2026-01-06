@@ -384,6 +384,37 @@
             "Determinamos ínfimo y supremo del conjunto.",
             "$$\\inf A = -\\infty \\quad , \\quad \\sup A = +\\infty$$"
         ]
+      },
+      {
+        "numero": 24,
+        "enunciado": "Escribir el conjunto A como intervalo o unión de intervalos y hallar si existen supremo e ínfimo de A",
+        "expresiones": [
+          "A=\\{x \\in \\mathbb{R} / \\frac{8}{x+4}-\\frac{2}{x-4} > \\frac{6}{x+4} \\}"
+        ],
+        "resolucion": [
+            "Llevamos todos los términos a un solo miembro.",
+            "$$\\frac{8}{x+4}-\\frac{6}{x+4}-\\frac{2}{x-4} > 0$$",
+            "Simplificamos los términos semejantes.",
+            "$$\\frac{2}{x+4}-\\frac{2}{x-4} > 0$$",
+            "Factorizamos el 2.",
+            "$$2\\left(\\frac{1}{x+4}-\\frac{1}{x-4}\\right) > 0$$",
+            "Unificamos denominador.",
+            "$$2\\cdot\\frac{(x-4)-(x+4)}{(x+4)(x-4)} > 0$$",
+            "Simplificamos el numerador.",
+            "$$2\\cdot\\frac{-8}{(x+4)(x-4)} > 0$$",
+            "Simplificamos la constante.",
+            "$$\\frac{-16}{(x+4)(x-4)} > 0$$",
+            "La fracción es positiva cuando el denominador es negativo.",
+            "$$(x+4)(x-4) < 0$$",
+            "Resolvemos la inecuación.",
+            "$$-4 < x < 4$$",
+            "Expresamos el conjunto solución.",
+            "$$A = (-4,4)$$",
+            "El conjunto está acotado.",
+            "Ínfimo de A: $$\\inf A = -4$$",
+            "Supremo de A: $$\\sup A = 4$$",
+            "No existen mínimo ni máximo porque los extremos no pertenecen al conjunto."
+        ]
       }
     ]
   }
