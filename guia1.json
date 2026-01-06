@@ -366,6 +366,23 @@
           "A=\\{x \\in \\mathbb{R} / ln(x^2+x-1)>0\\}"
         ],
         "resolucion": [
+            "Planteamos la desigualdad dada.",
+            "$$\\ln(x^2+x-1) > 0$$",
+            "Recordamos que el logaritmo natural es positivo si y solo si su argumento es mayor que 1.",
+            "$$x^2+x-1 > 1$$",
+            "Restamos 1 en ambos miembros.",
+            "$$x^2+x-2 > 0$$",
+            "Factorizamos el polinomio.",
+            "$$(x+2)(x-1) > 0$$",
+            "Resolvemos la desigualdad.",
+            "$$x < -2 \\; \\text{o} \\; x > 1$$",
+            "Verificamos la condición de existencia del logaritmo.",
+            "$$x^2+x-1 > 0$$",
+            "Esta condición se cumple en los intervalos obtenidos.",
+            "Escribimos el conjunto solución como intervalo.",
+            "$$A = (-\\infty,-2) \\cup (1,\\infty)$$",
+            "Determinamos ínfimo y supremo del conjunto.",
+            "$$\\inf A = -\\infty \\quad , \\quad \\sup A = +\\infty$$"
         ]
       }
     ]
