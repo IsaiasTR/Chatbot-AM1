@@ -516,7 +516,8 @@
             "Combinando restricciones:",
             "$$0 \\leq x < 2 \\; \\text{y} \\; x \\neq 1$$",
             "Por lo tanto, el dominio es:",
-            "resultado": "$$[0,1) \\cup (1,2)$$"
+            "resultado:",
+            "$$[0,1) \\cup (1,2)$$"
         ]
       }
     ]
