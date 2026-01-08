@@ -519,7 +519,17 @@
             "resultado:",
             "$$[0,1) \\cup (1,2)$$"
           ]
-        }
+        },
+       {
+         "numero": 34,
+         "enunciado": "Sea f(x), hallar la inversa de (f(x)^{-1}) y expresar el dominio de la inversa como intervalo o unión de intervalos",
+         "expresiones": [
+            "f(x)=5-e^{4x+1}"
+          ],
+         "resolucion": [
+           
+         ]
+       }
      ]
   }
 ]
