@@ -566,6 +566,27 @@
               "RESULTADO:",
               "$$A=(-\\infty,-\\frac{5}{3}) \\cup (3,\\infty)$$"
         ]
+      },
+      {
+         "numero": 38,
+         "enunciado": "Escribir el dominio de f(x) como intervalo o unión de intervalos",
+         "expresiones": [
+            "f(x)=\\ln(|x+2|-4)"
+          ],
+         "resolucion":[
+              "Para que el logaritmo natural esté definido, su argumento debe ser estrictamente positivo.",
+              "Planteamos la condición:",
+              "$$|x+2|-4>0$$",
+              "Sumamos 4 en ambos miembros:",
+              "$$|x+2|>4$$",
+              "Resolvemos la desigualdad de valor absoluto:",
+              "$$x+2>4 \\; \\text{o} \\; x+2<-4$$",
+              "Resolvemos cada caso:",
+              "$$x>2$$",
+              "$$x<-6$$",
+              "**RESULTADO:**",
+              "$$D_f=(-\\infty,-6) \\cup (2,\\infty)$$"
+        ]
       }
     ]
   }
