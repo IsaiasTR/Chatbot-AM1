@@ -543,6 +543,29 @@
             "resultado:",
             "$$f^{-1}(x)=\\frac{\\ln(5-x)-1}{4}, \\quad D_{f^{-1}}=(-\\infty,5)$$"
            ]
+        },
+      {
+         "numero": 36,
+         "enunciado": "Si f(x) es la función lineal tal que f(1)=1 y f(2)=4 , escribir como intervalo o unión de intervalos el conjunto A",
+         "expresiones": [
+            "A=\\{ x \\in \\mathbb{R} / \left|f(x)\right| > 7\\}"
+          ],
+         "resolucion": [
+              "Como f es lineal y pasa por los puntos $(1,1)$ y $(2,4)$, calculamos su expresión.",
+              "La pendiente es:",
+              "$$m=\\frac{4-1}{2-1}=3$$",
+              "Entonces la función es:",
+              "$$f(x)=3x-2$$",
+              "Planteamos la condición del conjunto:",
+              "$$|3x-2|>7$$",
+              "Resolvemos la desigualdad de valor absoluto:",
+              "$$3x-2>7 \\; \\text{o} \\; 3x-2<-7$$",
+              "Resolvemos cada caso:",
+              "$$3x>9 \\Rightarrow x>3$$",
+              "$$3x<-5 \\Rightarrow x< -\\frac{5}{3}$$",
+              "RESULTADO:",
+              "$$A=(-\\infty,-\\frac{5}{3}) \\cup (3,\\infty)$$"
+           ]
         }
      ]
   }
