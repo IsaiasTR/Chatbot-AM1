@@ -496,7 +496,7 @@
         ]
       },
       {
-         "numero": 32,
+        "numero": 32,
         "enunciado": "Escribir como intervalo o unión de intervalos el dominio de f(x)",
         "expresiones": [
           "f(x)=\\sqrt{\\frac{3x}{4-2x}}+\\frac{1}{x-1}"
@@ -588,6 +588,7 @@
               "$$D_f=(-\\infty,-6) \\cup (2,\\infty)$$"
         ]
       },
+      {
          "numero": 40,
          "enunciado": "Dadas las funciones f(x) y g(x) , calcular g \\circ f y hallar su dominio",
          "expresiones": [
