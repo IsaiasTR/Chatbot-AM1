@@ -584,8 +584,32 @@
               "Resolvemos cada caso:",
               "$$x>2$$",
               "$$x<-6$$",
-              "**RESULTADO:**",
+              "RESULTADO:",
               "$$D_f=(-\\infty,-6) \\cup (2,\\infty)$$"
+        ]
+      },
+         "numero": 40,
+         "enunciado": "Dadas las funciones f(x) y g(x) , calcular g \\circ f y hallar su dominio",
+         "expresiones": [
+            "f(x)=\\frac{x+2}{x-3}, \\quad g(x)=\\ln(x)"
+          ],
+         "resolucion": [
+              "Calculamos la composición $g \\circ f$:",
+              "$$g(f(x))=g\\left(\\frac{x+2}{x-3}\\right)$$",
+              "Como $g(x)=\\ln(x)$, reemplazamos:",
+              "$$g(f(x))=\\ln\\left(\\frac{x+2}{x-3}\\right)$$",
+              "Para que la composición esté definida deben cumplirse:",
+              "1) El argumento del logaritmo debe ser positivo.",
+              "2) El denominador no debe anularse.",
+              "Planteamos la condición:",
+              "$$\\frac{x+2}{x-3}>0$$",
+              "Determinamos los puntos críticos:",
+              "$$x+2=0 \\Rightarrow x=-2$$",
+              "$$x-3=0 \\Rightarrow x=3$$",
+              "Estudiamos el signo del cociente.",
+              "El cociente es positivo en los intervalos $(-\\infty,-2)$ y $(3,\\infty)$.",
+              "RESULTADO:",
+              "$$g \\circ f(x)=\\ln\\left(\\frac{x+2}{x-3}\\right), \\quad D_{g \\circ f}=(-\\infty,-2) \\cup (3,\\infty)$$"
         ]
       }
     ]
