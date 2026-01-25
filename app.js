@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       mensajeBot(
         "Hola 👋 Soy Isaias-Bot, el asistente virtual de <strong>Análisis Matemático 1</strong>.<br>" +
         "Cátedra: <strong>Vázquez Magnani</strong>.<br><br>" +
-        "Podés buscar de la siguiente forma (ej: <em>resolucion ejercicio 2 guia 1</em>, <em>resolucion ejercicio 2 guia 2</em>,...)"
+        "Podés buscar así:<br>" +
+        "<em>ejercicio 2 guia 1</em>, <em>ejercicio 4 guia 2</em>"
       );
     })
     .catch(() => {
@@ -54,6 +55,28 @@ function mensajeBot(html) {
 }
 
 /* ===============================
+   ANIMACIÓN ESCRIBIENDO
+================================ */
+
+let escribiendoDiv = null;
+
+function mostrarEscribiendo() {
+  const chat = document.getElementById("chat-container");
+  escribiendoDiv = document.createElement("div");
+  escribiendoDiv.className = "mensaje bot escribiendo";
+  escribiendoDiv.innerHTML = "<em>Isaias-Bot está escribiendo...</em>";
+  chat.appendChild(escribiendoDiv);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function ocultarEscribiendo() {
+  if (escribiendoDiv) {
+    escribiendoDiv.remove();
+    escribiendoDiv = null;
+  }
+}
+
+/* ===============================
    BÚSQUEDA
 ================================ */
 
@@ -67,10 +90,9 @@ function buscar() {
   mensajeUsuario(textoOriginal);
   input.value = "";
 
-  let respuesta = "";
+  mostrarEscribiendo();
 
-  const pedirResolucion =
-    texto.includes("resolucion") || texto.includes("resolución");
+  let respuesta = "";
 
   const numeroMatch = texto.match(/\d+/);
   const numeroEjercicio = numeroMatch ? parseInt(numeroMatch[0]) : null;
@@ -84,7 +106,6 @@ function buscar() {
   ejercicios.forEach(bloque => {
     bloque.ejercicios.forEach(ej => {
       if (
-        pedirResolucion &&
         numeroEjercicio === ej.numero &&
         ej.resolucion
       ) {
@@ -93,17 +114,18 @@ function buscar() {
     });
   });
 
-  /* ===== SI HAY AMBIGÜEDAD ===== */
-  if (pedirResolucion && !numeroGuia && coincidencias > 1) {
+  /* ===== AMBIGÜEDAD ===== */
+  if (numeroEjercicio && !numeroGuia && coincidencias > 1) {
+    ocultarEscribiendo();
     mensajeBot(
       "Ese ejercicio aparece en más de una guía.<br><br>" +
       "Por favor, especificá el número de guía.<br>" +
-      "Ejemplo: <em>resolución ejercicio 2 guía 1</em>"
+      "Ejemplo: <em>ejercicio 2 guia 1</em>"
     );
     return;
   }
 
-  /* ===== BÚSQUEDA NORMAL ===== */
+  /* ===== BÚSQUEDA ===== */
   ejercicios.forEach(bloque => {
 
     if (
@@ -115,13 +137,7 @@ function buscar() {
 
     bloque.ejercicios.forEach(ej => {
 
-      const contenido =
-        bloque.titulo + " " +
-        ej.enunciado + " " +
-        (ej.expresiones ? ej.expresiones.join(" ") : "");
-
       if (
-        pedirResolucion &&
         numeroEjercicio === ej.numero &&
         ej.resolucion
       ) {
@@ -142,34 +158,22 @@ function buscar() {
         });
         respuesta += "</ul><br>";
       }
-
-      if (
-        !pedirResolucion &&
-        contenido.toLowerCase().includes(texto)
-      ) {
-        respuesta += `<strong>${bloque.titulo}</strong> (pág. ${bloque.pagina})<br>`;
-        respuesta += `<strong>Ejercicio ${ej.numero}</strong><br>`;
-        respuesta += `${ej.enunciado}<br><br>`;
-
-        if (ej.expresiones) {
-          ej.expresiones.forEach(e => {
-            respuesta += `$$${e}$$`;
-          });
-          respuesta += "<br>";
-        }
-      }
     });
   });
 
-  if (respuesta === "") {
-    mensajeBot(
-      "No encontré información para esa consulta.<br><br>" +
-      "Probá con:<br>" +
-      "• resolucion ejercicio 2 guia 1<br>" +
-      "• resolucion ejercicio 2 guia 2<br>" +
-      "• resolucion ejercicio 4 guia 3"
-    );
-  } else {
-    mensajeBot(respuesta);
-  }
+  /* ===== RESPUESTA CON DELAY ===== */
+  setTimeout(() => {
+    ocultarEscribiendo();
+
+    if (respuesta === "") {
+      mensajeBot(
+        "No encontré información para esa consulta.<br><br>" +
+        "Probá con:<br>" +
+        "• ejercicio 2 guia 1<br>" +
+        "• ejercicio 4 guia 2"
+      );
+    } else {
+      mensajeBot(respuesta);
+    }
+  }, 1500); // ⏱️ delay aumentado
 }
