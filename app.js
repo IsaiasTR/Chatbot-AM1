@@ -19,9 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       mensajeBot(
         "Hola 👋 Soy Isaias-Bot, el asistente virtual de <strong>Análisis Matemático 1</strong>.<br>" +
-        "Cátedra: <strong>Vázquez Magnani</strong>.<br><br>" +
+        "Cátedra: <strong>Vazquez Magnani</strong>.<br><br>" +
         "Podés buscar así:<br>" +
-        "<em>ejercicio 2 guia 1</em>, <em>ejercicio 4 guia 2</em>"
+        "<em>ejercicio 2 guia 1</em>, <em>ejercicio 4 guia 2</em><br>" +
+        "<strong>Recordá escribir la palabra guia sin tilde.</strong>"
       );
     })
     .catch(() => {
@@ -159,7 +160,8 @@ function buscar() {
     ocultarEscribiendo();
     mensajeBot(
       "Ese ejercicio aparece en más de una guía.<br><br>" +
-      "Por favor, especificá el número de guía.<br>" +
+      "Por favor, especificá el número de guia.<br>" +
+      "<strong>Recuerda escribir la palabra guia sin tilde.</strong><br>"+
       "Ejemplo: <em>ejercicio 2 guia 1</em>"
     );
     return;
@@ -207,10 +209,11 @@ function buscar() {
         "No encontré información para esa consulta.<br><br>" +
         "Probá con:<br>" +
         "• ejercicio 2 guia 1<br>" +
-        "• ejercicio 4 guia 2"
+        "• ejercicio 4 guia 2<br>" +
+        "<strong>Recuerda escribir la palabra guia sin tilde.</strong><br>"
       );
     } else {
       mensajeBot(respuesta);
     }
-  }, 5000);
+  }, 4000);
 }
