@@ -1,123 +1,130 @@
 [
   {
-    "numero": 1,
-    "enunciado": "Hallar la pendiente de la recta tangente al gráfico de f(x) en el punto de abscisa x=2.",
-    "expresiones": [
-      "f(x)=(3x+1)e^{2x+4}"
-    ],
-    "resolucion": [
-      "Dada la función:",
-      "$$f(x)=(3x+1)e^{2x+4}$$",
+    "archivo": "Guia 3.pdf",
+    "pagina": 1,
+    "titulo": "Derivadas",
+    "ejercicios": [
+      {
+        "numero": 1,
+        "enunciado": "Hallar la pendiente de la recta tangente al gráfico de f(x) en el punto de abscisa x=2.",
+        "expresiones": [
+          "f(x)=(3x+1)e^{-2x+4}"
+        ],
+        "resolucion": [
+          "Dada la función:",
+          "$$f(x)=(3x+1)e^{-2x+4}$$",
 
-      "<strong>Calculamos la derivada de f(x).</strong>",
-      "Aplicamos la regla del producto:",
-      "$$f'(x)=3e^{2x+4}+(3x+1)e^{2x+4}\\cdot 2$$",
+          "<strong>Calculamos la derivada de f(x).</strong>",
+          "Aplicamos la regla del producto:",
+          "$$f'(x)=3e^{-2x+4}+(3x+1)e^{-2x+4}(-2)$$",
 
-      "Factorizamos el término común:",
-      "$$f'(x)=e^{2x+4}[3+2(3x+1)]$$",
+          "Factorizamos el término común:",
+          "$$f'(x)=e^{-2x+4}[3-2(3x+1)]$$",
 
-      "Simplificamos:",
-      "$$f'(x)=e^{2x+4}(6x+5)$$",
+          "Simplificamos:",
+          "$$f'(x)=e^{-2x+4}(-6x+1)$$",
 
-      "<strong>Evaluamos en x=2.</strong>",
-      "$$f'(2)=e^{8}(17)$$",
+          "<strong>Evaluamos en x=2.</strong>",
+          "$$f'(2)=e^{0}(-11)$$",
 
-      "<strong>Conclusión:</strong>",
-      "La pendiente de la recta tangente en x=2 es:",
-      "$$m=17e^{8}$$"
-    ]
-  },
-  {
-    "numero": 2,
-    "enunciado": "Hallar la pendiente de la recta tangente al gráfico de f(x) en el punto de abscisa x=-2.",
-    "expresiones": [
-      "f(x)=\\sqrt{x^2+12}+e^{3x^2+5x-2}"
-    ],
-    "resolucion": [
-      "Dada la función:",
-      "$$f(x)=\\sqrt{x^2+12}+e^{3x^2+5x-2}$$",
+          "<strong>Conclusión:</strong>",
+          "La pendiente de la recta tangente en x=2 es:",
+          "$$m=-11$$"
+        ]
+      },
+      {
+        "numero": 2,
+        "enunciado": "Hallar la pendiente de la recta tangente al gráfico de f(x) en el punto de abscisa x=-2.",
+        "expresiones": [
+          "f(x)=\\sqrt{x^2+12}+e^{3x^2+5x-2}"
+        ],
+        "resolucion": [
+          "Dada la función:",
+          "$$f(x)=\\sqrt{x^2+12}+e^{3x^2+5x-2}$$",
 
-      "<strong>Derivamos término a término.</strong>",
-      "$$f'(x)=\\frac{x}{\\sqrt{x^2+12}}+e^{3x^2+5x-2}(6x+5)$$",
+          "<strong>Derivamos término a término.</strong>",
+          "$$f'(x)=\\frac{x}{\\sqrt{x^2+12}}+e^{3x^2+5x-2}(6x+5)$$",
 
-      "<strong>Evaluamos en x=-2.</strong>",
-      "$$f'(-2)=\\frac{-2}{\\sqrt{16}}+e^{0}(-7)$$",
+          "<strong>Evaluamos en x=-2.</strong>",
+          "$$f'(-2)=\\frac{-2}{\\sqrt{16}}+e^{0}(-7)$$",
 
-      "Simplificamos:",
-      "$$f'(-2)=-\\frac{1}{2}-7$$",
+          "Simplificamos:",
+          "$$f'(-2)=-\\frac{1}{2}-7$$",
 
-      "<strong>Conclusión:</strong>",
-      "La pendiente buscada es:",
-      "$$m=-\\frac{15}{2}$$"
-    ]
-  },
-  {
-    "numero": 3,
-    "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=-1.",
-    "expresiones": [
-      "f(x)=\\ln(2x^2-4x+3)"
-    ],
-    "resolucion": [
-      "Dada la función:",
-      "$$f(x)=\\ln(2x^2-4x+3)$$",
+          "<strong>Conclusión:</strong>",
+          "La pendiente buscada es:",
+          "$$m=-\\frac{15}{2}$$"
+        ]
+      },
+      {
+        "numero": 3,
+        "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=-1.",
+        "expresiones": [
+          "f(x)=\\ln(2x^2-4x+3)"
+        ],
+        "resolucion": [
+          "Dada la función:",
+          "$$f(x)=\\ln(2x^2-4x+3)$$",
 
-      "<strong>Calculamos la derivada.</strong>",
-      "$$f'(x)=\\frac{4x-4}{2x^2-4x+3}$$",
+          "<strong>Calculamos la derivada.</strong>",
+          "$$f'(x)=\\frac{4x-4}{2x^2-4x+3}$$",
 
-      "<strong>Evaluamos en x=-1.</strong>",
-      "$$f'(-1)=\\frac{-8}{9}$$",
+          "<strong>Evaluamos en x=-1.</strong>",
+          "$$f'(-1)=-\\frac{8}{9}$$",
 
-      "<strong>Calculamos el punto de tangencia.</strong>",
-      "$$f(-1)=\\ln(9)$$",
+          "<strong>Calculamos el punto de tangencia.</strong>",
+          "$$f(-1)=\\ln(9)$$",
 
-      "<strong>Ecuación de la recta tangente.</strong>",
-      "$$y-\\ln(9)=-\\frac{8}{9}(x+1)$$"
-    ]
-  },
-  {
-    "numero": 4,
-    "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=-3.",
-    "expresiones": [
-      "f(x)=3+e^{9-x^2}"
-    ],
-    "resolucion": [
-      "Dada la función:",
-      "$$f(x)=3+e^{9-x^2}$$",
+          "<strong>Ecuación de la recta tangente.</strong>",
+          "$$y-\\ln(9)=-\\frac{8}{9}(x+1)$$"
+        ]
+      },
+      {
+        "numero": 4,
+        "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=-3.",
+        "expresiones": [
+          "f(x)=3+e^{9-x^2}"
+        ],
+        "resolucion": [
+          "Dada la función:",
+          "$$f(x)=3+e^{9-x^2}$$",
 
-      "<strong>Derivamos.</strong>",
-      "$$f'(x)=e^{9-x^2}(-2x)$$",
+          "<strong>Derivamos.</strong>",
+          "$$f'(x)=-2xe^{9-x^2}$$",
 
-      "<strong>Evaluamos en x=-3.</strong>",
-      "$$f'(-3)=6$$",
+          "<strong>Evaluamos en x=-3.</strong>",
+          "$$f'(-3)=6$$",
 
-      "<strong>Calculamos el punto.</strong>",
-      "$$f(-3)=4$$",
+          "<strong>Calculamos el punto.</strong>",
+          "$$f(-3)=4$$",
 
-      "<strong>Ecuación de la recta tangente.</strong>",
-      "$$y-4=6(x+3)$$"
-    ]
-  },
-  {
-    "numero": 5,
-    "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=1.",
-    "expresiones": [
-      "f(x)=x^2+\\frac{4}{3}x+\\ln(x^4)"
-    ],
-    "resolucion": [
-      "Dada la función:",
-      "$$f(x)=x^2+\\frac{4}{3}x+\\ln(x^4)$$",
+          "<strong>Ecuación de la recta tangente.</strong>",
+          "$$y-4=6(x+3)$$"
+        ]
+      },
+      {
+        "numero": 5,
+        "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=1.",
+        "expresiones": [
+          "f(x)=x^2+\\frac{4}{3}x+\\ln(x^4)"
+        ],
+        "resolucion": [
+          "Dada la función:",
+          "$$f(x)=x^2+\\frac{4}{3}x+\\ln(x^4)$$",
 
-      "<strong>Derivamos término a término.</strong>",
-      "$$f'(x)=2x+\\frac{4}{3}+\\frac{4}{x}$$",
+          "<strong>Derivamos término a término.</strong>",
+          "$$f'(x)=2x+\\frac{4}{3}+\\frac{4}{x}$$",
 
-      "<strong>Evaluamos en x=1.</strong>",
-      "$$f'(1)=\\frac{22}{3}$$",
+          "<strong>Evaluamos en x=1.</strong>",
+          "$$f'(1)=\\frac{22}{3}$$",
 
-      "<strong>Calculamos el punto.</strong>",
-      "$$f(1)=\\frac{7}{3}$$",
+          "<strong>Calculamos el punto.</strong>",
+          "$$f(1)=\\frac{7}{3}$$",
 
-      "<strong>Ecuación de la recta tangente.</strong>",
-      "$$y-\\frac{7}{3}=\\frac{22}{3}(x-1)$$"
+          "<strong>Ecuación de la recta tangente.</strong>",
+          "$$y-\\frac{7}{3}=\\frac{22}{3}(x-1)$$"
+        ]
+      }
     ]
   }
 ]
