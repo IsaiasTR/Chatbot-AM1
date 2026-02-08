@@ -295,6 +295,15 @@
                  "Expresamos la recta en forma y = mx + b:",
                  "$$y=2x+1$$"
         ]
+      },
+      {
+        "numero": 9,
+        "enunciado": "Hallar todos los x₀ ∈ ℝ  para los que la recta de ecuación y=-x es la recta tangente al gráfico de f(x) en el punto (xo,f(xo)).",
+        "expresiones": [
+             "f(x)=\\ln(5x^2-x+1)"
+        ],
+        "resolucion": [
+        ]
       }
     ]
   }
