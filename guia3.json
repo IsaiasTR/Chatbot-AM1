@@ -170,6 +170,15 @@
                 "$$y-\\frac{5}{3}=3x-3$$",
                 "$$y=3x-\\frac{4}{3}$$"
         ]
+      },
+      {
+        "numero": 6,
+        "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=3.",
+        "expresiones": [
+             "f(x)=x^3\\cdot\\cos^2(x-3)+4"
+        ],
+        "resolucion": [
+        ]
       }
     ]
   }
