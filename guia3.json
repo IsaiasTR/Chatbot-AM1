@@ -102,20 +102,32 @@
           "f(x)=3+e^{9-x^2}"
         ],
         "resolucion": [
-          "Dada la función:",
-          "$$f(x)=3+e^{9-x^2}$$",
+                  "Dada la función:",
+                  "$$f(x)=3+e^{9-x^2}$$",
 
-          "<strong>Derivamos.</strong>",
-          "$$f'(x)=-2xe^{9-x^2}$$",
+                  "<strong>Calculamos la derivada de f(x).</strong>",
+                  "La derivada del término constante es 0 y derivamos el término exponencial aplicando la regla de la cadena:",
+                  "$$f'(x)=e^{9-x^2}\\cdot(-2x)$$",
 
-          "<strong>Evaluamos en x=-3.</strong>",
-          "$$f'(-3)=6$$",
+                  "Por lo tanto:",
+                  "$$f'(x)=-2x\\,e^{9-x^2}$$",
 
-          "<strong>Calculamos el punto.</strong>",
-          "$$f(-3)=4$$",
+                  "<strong>Evaluamos la derivada en x=-3.</strong>",
+                  "$$f'(-3)=-2(-3)e^{9-9}$$",
+                  "$$f'(-3)=6e^{0}$$",
+                  "$$f'(-3)=6$$",
 
-          "<strong>Ecuación de la recta tangente.</strong>",
-          "$$y-4=6(x+3)$$"
+                  "<strong>Calculamos el punto de tangencia.</strong>",
+                  "$$f(-3)=3+e^{9-9}$$",
+                  "$$f(-3)=3+1$$",
+                  "$$f(-3)=4$$",
+
+                  "<strong>Ecuación de la recta tangente.</strong>",
+                  "Usamos la ecuación punto–pendiente:",
+                  "$$y-4=6(x+3)$$",
+
+                  "<strong>Forma explícita.</strong>",
+                  "$$y=6x+22$$"
         ]
       },
       {
