@@ -349,7 +349,54 @@
                 "El único valor que satisface ambas condiciones es:",
                 "$$x₀=0$$"
         ]
-      }
+      },
+      {
+        "numero": 10,
+        "enunciado": "Hallar a ∈ ℝ , a ≠ 0, de manera que la recta de ecuación y=x+1 sea la recta tangente al gráfico de f(x) en el punto xo=0.",
+        "expresiones": [
+             "f(x)=\\frac{\\ln(5x+1)}{x^3+a}+1"
+        ],
+        "resolucion": [
+                "La recta tangente dada es y = x + 1.",
+                "De ella obtenemos:",
+                "- Pendiente m = 1.",
+                "- Punto de tangencia: (0, 1).",
+                "",
+                "<strong>Condiciones de tangencia en x0 = 0:</strong>",
+                "1) f(0) = 1",
+                "2) f'(0) = 1",
+                "",
+                "<strong>Evaluamos f(0).</strong>",
+                "$$f(0)=\\frac{\\ln(1)}{a}+1=0+1=1$$",
+                "La primera condición se cumple para todo a ≠ 0.",
+                "",
+                "<strong>Calculamos la derivada de f(x).</strong>",
+                "Sea g(x)=\\ln(5x+1) y h(x)=x^3+a.",
+                "$$f(x)=\\frac{g(x)}{h(x)}+1$$",
+                "",
+                "Usamos la regla del cociente:",
+                "$$f'(x)=\\frac{g'(x)h(x)-g(x)h'(x)}{h(x)^2}$$",
+                "",
+                "Derivadas:",
+                "$$g'(x)=\\frac{5}{5x+1}, \\quad h'(x)=3x^2$$",
+                "",
+                "<strong>Evaluamos en x=0.</strong>",
+                "$$g(0)=0, \\quad g'(0)=5, \\quad h(0)=a, \\quad h'(0)=0$$",
+                "",
+                "Sustituyendo:",
+                "$$f'(0)=\\frac{5a}{a^2}=\\frac{5}{a}$$",
+                "",
+                "<strong>Imponemos la condición de pendiente.</strong>",
+                "$$\\frac{5}{a}=1$$",
+                "",
+                "Resolviendo:",
+                "$$a=5$$",
+                "",
+                "<strong>Conclusión:</strong>",
+                "El valor buscado es:",
+                "$$a=5$$"
+        ]
+      } 
     ]
   }
 ]
