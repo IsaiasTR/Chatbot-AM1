@@ -303,6 +303,51 @@
              "f(x)=\\ln(5x^2-x+1)"
         ],
         "resolucion": [
+                 "Dada la función:",
+                 "$$f(x)=\\ln(5x^2-x+1)$$",
+
+                 "La recta tangente tiene ecuación y = -x, por lo tanto su pendiente es:",
+                 "$$m=-1$$",
+
+                 "<strong>Condición de recta tangente.</strong>",
+                 "Para que y = -x sea recta tangente en x₀ deben cumplirse:",
+                 "1) f'(x₀) = -1",
+                 "2) f(x₀) = -x₀",
+
+                 "<strong>Calculamos la derivada de f(x).</strong>",
+                 "$$f'(x)=\\frac{10x-1}{5x^2-x+1}$$",
+
+                 "<strong>Imponemos la condición f'(x₀) = -1.</strong>",
+                 "$$\\frac{10x₀-1}{5x₀^2-x₀+1}=-1$$",
+
+                 "Multiplicamos ambos miembros por el denominador:",
+                 "$$10x₀-1=-(5x₀^2-x₀+1)$$",
+
+                 "Desarrollamos:",
+                 "$$10x₀-1=-5x₀^2+x₀-1$$",
+
+                 "Llevamos todo a un mismo miembro:",
+                 "$$5x₀^2+9x₀=0$$",
+
+                 "Factorizamos:",
+                 "$$x₀(5x₀+9)=0$$",
+
+                 "Obtenemos las soluciones:",
+                 "$$x₀=0 \\quad \\text{o} \\quad x₀=-\\frac{9}{5}$$",
+
+                 "<strong>Verificamos la condición f(x₀) = -x₀.</strong>",
+
+                "Para x₀ = 0:",
+                "$$f(0)=\\ln(1)=0=-0$$",
+                "Cumple la condición.",
+
+                "Para x₀ = -\\frac{9}{5}:",
+                "$$f\\left(-\\frac{9}{5}\\right)=\\ln(\\tfrac{91}{5}) \\neq \\frac{9}{5}$$",
+                "No cumple la condición.",
+
+                "<strong>Conclusión.</strong>",
+                "El único valor que satisface ambas condiciones es:",
+                "$$x₀=0$$"
         ]
       }
     ]
