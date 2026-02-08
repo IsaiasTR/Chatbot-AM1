@@ -225,6 +225,41 @@
              "f(x)=\\frac{7}{5}x^2+\\ln(\\sqrt{6x^2-5})"
         ],
         "resolucion": [
+              "Dada la función:",
+    "$$f(x)=\\frac{7}{5}x^2+\\ln(\\sqrt{6x^2-5})$$",
+
+    "<strong>Calculamos la derivada de f(x).</strong>",
+    "Derivamos término a término.",
+
+    "Derivada del primer término:",
+    "$$\\left(\\frac{7}{5}x^2\\right)'=\\frac{14}{5}x$$",
+
+    "Para el segundo término usamos propiedades de logaritmos:",
+    "$$\\ln(\\sqrt{6x^2-5})=\\frac{1}{2}\\ln(6x^2-5)$$",
+
+    "Derivamos:",
+    "$$\\left(\\frac{1}{2}\\ln(6x^2-5)\\right)'=\\frac{1}{2}\\cdot\\frac{12x}{6x^2-5}=\\frac{6x}{6x^2-5}$$",
+
+    "Por lo tanto, la derivada es:",
+    "$$f'(x)=\\frac{14}{5}x+\\frac{6x}{6x^2-5}$$",
+
+    "<strong>Evaluamos la derivada en x=-1.</strong>",
+    "$$f'(-1)=\\frac{14}{5}(-1)+\\frac{6(-1)}{6(1)-5}$$",
+    "$$f'(-1)=-\\frac{14}{5}-6$$",
+    "$$f'(-1)=-\\frac{44}{5}$$",
+
+    "<strong>Calculamos el punto de tangencia.</strong>",
+    "$$f(-1)=\\frac{7}{5}(1)+\\ln(\\sqrt{1})$$",
+    "$$f(-1)=\\frac{7}{5}+0=\\frac{7}{5}$$",
+
+    "<strong>Ecuación de la recta tangente.</strong>",
+    "Usamos la ecuación punto–pendiente:",
+    "$$y-\\frac{7}{5}=-\\frac{44}{5}(x+1)$$",
+
+    "Expresamos la recta en forma y=mx+b:",
+    "$$y=-\\frac{44}{5}x-\\frac{37}{5}$$"
+        ]
+      }
     ]
   }
 ]
