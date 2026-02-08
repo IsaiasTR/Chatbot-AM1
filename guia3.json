@@ -217,7 +217,14 @@
                 "$$y=27x-81+31$$",
                 "$$y=27x-50$$"
         ]
-      }
+      },
+      {
+        "numero": 7,
+        "enunciado": "Hallar la ecuación de la recta tangente al gráfico de f(x) en el punto de abscisa x=-1.",
+        "expresiones": [
+             "f(x)=\\frac{7}{5}x^2+\\ln(\\sqrt{6x^2-5})"
+        ],
+        "resolucion": [
     ]
   }
 ]
