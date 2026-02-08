@@ -178,6 +178,44 @@
              "f(x)=x^3\\cdot\\cos^2(x-3)+4"
         ],
         "resolucion": [
+                "Dada la función:",
+                "$$f(x)=x^3\\cos^2(x-3)+4$$",
+
+                "<strong>Calculamos la derivada de f(x).</strong>",
+                "Observamos que f(x) es una suma, y el primer término es un producto.",
+                "Aplicamos la regla del producto:",
+ 
+                "$$f'(x)=(x^3)'\\cos^2(x-3)+x^3\\,(\\cos^2(x-3))'$$",
+
+                "Derivamos cada factor:",
+                "$$(x^3)'=3x^2$$",
+
+                "Para derivar \\(\\cos^2(x-3)\\), usamos la regla de la cadena:",
+                "$$(\\cos^2(u))'=2\\cos(u)(-\\sin(u))u'$$",
+                "con \\(u=x-3\\), entonces:",
+
+                "$$(\\cos^2(x-3))'=-2\\cos(x-3)\\sin(x-3)$$",
+
+                "Reemplazamos en la derivada:",
+                "$$f'(x)=3x^2\\cos^2(x-3)-2x^3\\cos(x-3)\\sin(x-3)$$",
+
+                "<strong>Evaluamos la derivada en x=3.</strong>",
+                "Usamos que:",
+                "$$\\cos(0)=1 \\quad \\text{y} \\quad \\sin(0)=0$$",
+
+                "$$f'(3)=3(3)^2\\cdot 1 - 2(3)^3\\cdot 1 \\cdot 0$$",
+                "$$f'(3)=27$$",
+
+                "<strong>Calculamos el punto de tangencia.</strong>",
+                "$$f(3)=3^3\\cos^2(0)+4=27\\cdot 1+4=31$$",
+
+                "<strong>Ecuación de la recta tangente.</strong>",
+                "Usamos la ecuación punto-pendiente:",
+                "$$y-31=27(x-3)$$",
+
+                "La expresamos en forma y=mx+b:",
+                "$$y=27x-81+31$$",
+                "$$y=27x-50$$"
         ]
       }
     ]
